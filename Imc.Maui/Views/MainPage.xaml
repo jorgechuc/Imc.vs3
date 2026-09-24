@@ -5,29 +5,46 @@
              Title="Índice de masa corporal">
 
     <ScrollView>
-        <VerticalStackLayout
-            Padding="24"
-            Spacing="24">
+        <Grid
+            RowDefinitions="Auto,Auto,*"
+            ColumnDefinitions="*"
+            RowSpacing="24"
+            Padding="24">
             <Border
                 Stroke="LightGray"
                 StrokeThickness="2">
-                <VerticalStackLayout
+                <Grid
+                    RowDefinitions="*,*"
+                    ColumnDefinitions="Auto,*"
                     Padding="18"
-                    Spacing="8">
+                    RowSpacing="8"
+                    ColumnSpacing="8">
                     <Label
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        VerticalOptions="Center"
                         Text="Proporcione el peso en kilogramos:"/>
                     <Entry
+                        Grid.Row="0"
+                        Grid.Column="1"
                         BackgroundColor="WhiteSmoke"
                         x:Name="PesoEntry"/>
                     <Label
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        VerticalOptions="Center"
                         Text="Proporcione la estatura en metros:"/>
                     <Entry
+                        Grid.Row="1"
+                        Grid.Column="1"
                         BackgroundColor="WhiteSmoke"
                         x:Name="EstaturaEntry"/>
-                </VerticalStackLayout>
+                </Grid>
             </Border>
 
             <HorizontalStackLayout
+                Grid.Row="1"
+                Grid.Column="0"
                 HorizontalOptions="Center"
                 Spacing="24">
                 <Button
@@ -40,6 +57,8 @@
             </HorizontalStackLayout>
 
             <Border
+                Grid.Row="2"
+                Grid.Column="1"
                 Stroke="LightGray"
                 StrokeThickness="2">
                 <Border.StrokeShape>
@@ -67,7 +86,7 @@
                         x:Name="SituacionNutricionalLabel"/>
                 </VerticalStackLayout>
             </Border>
-        </VerticalStackLayout>
+        </Grid>
 
     </ScrollView>
 
