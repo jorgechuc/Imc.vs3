@@ -27,8 +27,8 @@
                     <Entry
                         Grid.Row="0"
                         Grid.Column="1"
-                        BackgroundColor="WhiteSmoke"
-                        x:Name="PesoEntry"/>
+                        Text="{Binding Path=Peso}"
+                        BackgroundColor="WhiteSmoke"/>
                     <Label
                         Grid.Row="1"
                         Grid.Column="0"
@@ -37,8 +37,8 @@
                     <Entry
                         Grid.Row="1"
                         Grid.Column="1"
-                        BackgroundColor="WhiteSmoke"
-                        x:Name="EstaturaEntry"/>
+                        Text="{Binding Path=Estatura}"
+                        BackgroundColor="WhiteSmoke"/>
                 </Grid>
             </Border>
 
@@ -50,10 +50,10 @@
                 <Button
                     Text="Calcular"
                     BackgroundColor="Green"
-                    Clicked="OnCalcularButtonClicked"/>
+                    Command="{Binding Path=CalcularCommand}"/>
                 <Button
                     Text="Limpiar"
-                    Clicked="OnLimpiarButtonClicked"/>
+                    Command="{Binding Path=LimpiarCommand}"/>
             </HorizontalStackLayout>
 
             <Border
@@ -71,19 +71,17 @@
                     <Label
                         Text="El índice de masa corporal es:"/>
                     <Label
-                        Text="23.4567"
+                        Text="{Binding Path=Imc}"
                         HorizontalOptions="Center"
                         FontSize="Medium"
-                        FontAttributes="Bold"
-                        x:Name="ImcLabel"/>
+                        FontAttributes="Bold"/>
                     <Label
                         Text="La situación nutricional de la persona es:"/>
                     <Label
-                        Text="Peso normal"
+                        Text="{Binding Path=EstadoNutricional}"
                         HorizontalOptions="Center"
                         FontSize="Medium"
-                        FontAttributes="Bold"
-                        x:Name="SituacionNutricionalLabel"/>
+                        FontAttributes="Bold"/>
                 </VerticalStackLayout>
             </Border>
         </Grid>
